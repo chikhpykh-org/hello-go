@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - 1.6
+  - 1.7
+  
+install:
+  - go get github.com/tcnksm/ghr
+  
+script: go build -o test && ghr -t $secNval -u "chikhpykh" -r "hello-go" --replace 0.1.0 ./
