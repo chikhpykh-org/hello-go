@@ -7,4 +7,4 @@ go:
 install:
   - go get github.com/tcnksm/ghr
   
-script: go build -o test && ls -alF
+script: go build -o test && ls -alF && .test && echo ${hH}
