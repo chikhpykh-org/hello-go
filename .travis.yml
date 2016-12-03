@@ -3,10 +3,7 @@ language: go
 go:
   - 1.7
   
-env:
-  BUILD_PRM=`-ldflags="-s -w" -v`
-  
 install:
   - go get github.com/tcnksm/ghr
   
-script: go build $BUILD_PRM -o hello && ls -alF && ./hello && ghr -t $secNval -u chikhpykh-org -r hello-go --replace v0.1.0 ./hello
+script: go build -ldflags="-s -w" -v -o hello && ls -alF && ./hello && ghr -t $secNval -u chikhpykh-org -r hello-go --replace v0.1.0 ./hello
