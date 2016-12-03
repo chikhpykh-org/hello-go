@@ -4,7 +4,7 @@ go:
   - 1.7
   
 env:
-  BUILD_PRM='-ldflags="-s -w" -v'
+  BUILD_PRM=-ldflags="-s -w" -v
   
 install:
   - go get github.com/tcnksm/ghr
