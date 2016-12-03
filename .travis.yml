@@ -6,7 +6,4 @@ go:
 install:
   - go get github.com/tcnksm/ghr
   
-gobuild_args:
-  - -ldflags="-s -w" -v
-  
-script: go build -o test && ls -alF && ghr -t $secNval -u chikhpykh-org -r hello-go --replace v0.1.0 ./test
+script: go build -ldflags="-s -w" -v -o test && ls -alF && ghr -t $secNval -u chikhpykh-org -r hello-go --replace v0.1.0 ./test
